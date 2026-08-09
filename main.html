@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星莫的小窝</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航栏 (Vista 熄灯风格) -->
+    <header class="aero-header">
+        <div class="header-inner">
+            <nav class="main-nav">
+                <a href="main.html" class="nav-link">首页</a>
+                <a href="res.html" class="nav-link">资源</a>
+                <a href="about.html" class="nav-link">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <h1>(=^▽^=) 你好</h1>
+        <p>这里是星莫的小窝</p>
+    </div>
+
+    <!-- ★ 新增：公告栏（位于正文与文章区之间） -->
+    <div class="notice-banner">
+        <div class="title">公告栏</div>
+        <div class="content">
+            <p>有些bug真的懒得修了,反正不会影响正常体验,等以后再来说吧 诶嘿~</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="article-showcase">
+        <!-- 标题栏（与功能区结构一致） -->
+        <div class="article-titlebar">
+            <span class="title-text">文章</span>
+        </div>
+        <!-- 可滚动内容区 -->
+        <div class="article-list">
+            <div class="article-card" onclick="handleArticleClick('id')">
+                <div class="article-card-title">这里是文章区</div>
+                <div class="article-card-summary">还没想好要写什么,先这样吧</div>
+                <div class="article-card-meta">Test</div>
+            </div>
+            <!-- 更多 .article-card -->
+        </div>
+    </div>
+
+    <div class="sidebar-panel">
+        <div class="aero-window">
+            <!-- 标题栏：作为窗口的头部，不单独设边框 -->
+            <div class="window-titlebar">
+                <span class="title-text">功能</span>
+            </div>
+            <!-- 内容区 -->
+            <ul class="window-menu">
+                <li><a href="404.html"><img src="icons/search.png" alt="" class="menu-icon"> 搜索</a></li>
+                <li><a href="https://github.com/Xingmo2013/Xingmo-Home/issues/1"><img src="icons/guestbook.png" alt="" class="menu-icon"> 留言</a></li>
+                <li><a href="404.html"><img src="icons/personalize.png" alt="" class="menu-icon"> 个性化</a></li>
+            </ul>
+        </div>
+        <div class="media-player">
+            <div class="player-titlebar">来点音乐</div>
+            <div class="player-content">
+                <div class="info">加载中...</div>
+                <div class="cover"></div>
+
+                <!-- 进度条 + 时间 -->
+                <div class="progress-container">
+                    <input type="range" class="progress-bar" min="0" max="100" value="0" step="0.1">
+                    <div class="time-display">
+                        <span class="current-time">0:00</span>
+                        <span class="duration">0:00</span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button title="上一首">⏮</button>
+                    <button title="播放/暂停">▶</button>
+                    <button title="下一首">⏭</button>
+                </div>
+                <div class="playlist"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- 引入 jsmediatags 用于读取 MP3 封面 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <!-- 引入播放器核心 JS -->
+    <script src="player.js"></script>
+</body>
+
+</html>
